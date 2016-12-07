@@ -1,5 +1,10 @@
 <template>
   <div class="view-wrapper">
+    <ul>
+      <li>
+        <router-link to="/city">chang</router-link>
+      </li>
+    </ul>
     <transition :name="transitionName">
       <router-view class="view"></router-view>
     </transition>
