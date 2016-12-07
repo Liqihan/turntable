@@ -5,32 +5,30 @@ Vue.use(Router)
 
 import baseUsage from '../component/baseUsage.vue';
 import date from '../component/date.vue';
-import city from '../component/city.vue';
+import city from '../view/city.vue';
 import award from '../component/award.vue';
+import index from '../view/index.vue';
 
 export default new Router({
-//   mode: 'history',
-  routes: [
-    {
+	//   mode: 'history',
+	routes: [{
         path: '/',
-        // redirect: '/baseUsage'
-        component: award
-    },
-    {
-      path: '/baseUsage',
-      component: baseUsage
-    },
-    {
-      path: '/date',
-      component: date
-    },
-    {
-      path: '/city',
-      component: city
-    },
-    {
-      path: '/award',
-      component: award
-    }
-  ]
+        component:index
+	}, {
+		path: '/award',
+		// redirect: '/baseUsage'
+		component: award
+	}, {
+		path: '/baseUsage',
+		component: baseUsage
+	}, {
+		path: '/date',
+		component: date
+	}, {
+		path: '/city',
+		component: city
+	}, {
+		path: '/award',
+		component: award
+	}]
 })
