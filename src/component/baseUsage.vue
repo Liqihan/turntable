@@ -1,14 +1,12 @@
 <template>
   <div>
-    <h1 @click="visible1 = true">base</h1>
-    <h1 @click="visible2 = true">slot</h1>
-    <h1 @click="visible3 = true">width</h1>
-    <picker v-model="visible1" :data-items="baseItems" @change="onBaseValuesChange"></picker>
-    <picker v-model="visible2" :data-items="slotItems">
-        <div class="top-content" slot="top-content">Top of the content.</div>
-        <div class="bottom-content" slot="bottom-content">Bottom of the content.</div>
-    </picker>
-    <picker v-model="visible3" :data-items="widthItems"></picker>
+    <mt-header title="获得的奖励">
+        <router-link to="/" slot="left">
+        <mt-button icon="back"></mt-button>
+        </router-link>
+        <mt-button slot="right">保存</mt-button>
+    </mt-header>
+    <award-item :items="items"></award-item>
   </div>
 </template>
 

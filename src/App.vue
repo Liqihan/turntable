@@ -1,12 +1,10 @@
 <template>
   <div class="view-wrapper">
-    <ul>
-      <li><router-link to="/baseUsage">baseUsage</router-link></li>
-      <li><router-link to="/date">date</router-link></li>
-      <li><router-link to="/city">city</router-link></li>
-    </ul>
-    <router-view class="view"></router-view>
+    <transition :name="transitionName">
+      <router-view class="view"></router-view>
+    </transition>
   </div>
+
 </template>
 
 <script>
@@ -19,7 +17,9 @@ import city from './component/city.vue';
 
 export default {
   data () {
-    return {}
+    return {
+      transitionName:'slide-left'
+    }
   },
   components: { baseUsage, date, city}
 }

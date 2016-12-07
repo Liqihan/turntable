@@ -132,7 +132,7 @@
 }
 
 .picker-wrapper .picker-item {
-	font-size: 20px;
+	font-size: 14px;
 	height: 100%;
 	position: relative;
 	overflow: hidden;
