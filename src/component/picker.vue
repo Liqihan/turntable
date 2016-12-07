@@ -204,7 +204,8 @@
 				<slot class="bottom-content" name="bottom-content"></slot>
 			</div>
 
-		</div>
+		</div>            // <mt-cell v-for="n in 10" :title="'内容 ' + n" />
+
 
 	</transition>
 
@@ -213,6 +214,7 @@
 <script>
 
 	import Vue from 'vue';
+            // <mt-cell v-for="n in 10" :title="'内容 ' + n" />
 
 	import VueTouch from 'vue-touch';
 
@@ -242,6 +244,7 @@
 				type: Array
 			}
 		},
+            // <mt-cell v-for="n in 10" :title="'内容 ' + n" />
 
 		methods : {
 

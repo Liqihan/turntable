@@ -2,13 +2,21 @@ import 'mint-ui/lib/style.css'
 import Vue from 'vue';
 import App from './App.vue';
 import VueResource from 'vue-resource';
-import router from './router'
+import router from './router';
+// var $ = require("jquery");
+
+
 import picker from './component/picker.vue';
 
 Vue.component(picker.name, picker);
 
+// 自己写的组件
 import awardItem from './component/award-item.vue'
 Vue.component(awardItem.name, awardItem)
+import turnTable from './component/turn-table.vue'
+Vue.component(turnTable.name, turnTable)
+import sponsorList from './component/sponsor-list.vue'
+Vue.component(sponsorList.name, sponsorList)
 
 // mint-ui组件
 import { Field } from 'mint-ui';
@@ -19,6 +27,12 @@ import { Header } from 'mint-ui';
 Vue.component(Header.name, Header);
 import { Button } from 'mint-ui';
 Vue.component(Button.name, Button);
+import { Navbar, TabItem, TabContainer, TabContainerItem } from 'mint-ui';
+Vue.component(Navbar.name, Navbar);
+Vue.component(TabItem.name, TabItem);
+
+Vue.component(TabContainer.name, TabContainer);
+Vue.component(TabContainerItem.name, TabContainerItem);
 
 Vue.use(VueResource);
 
