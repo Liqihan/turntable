@@ -28,8 +28,6 @@ export default {
             type:String,
             default:"http://kano.guahao.cn/ojx3712503?token=ZmhCZmpLUHMyWUJkUkJPNDhaMG10dz09X1RJTUVfQUVTCOUSTOM"
         },
-        ssss:function(){     
-        }
     },
     data() {
         return {
@@ -54,7 +52,6 @@ export default {
                     self.isRunning = false;
                 }
             });
-            self.ssss();
         }
     },
     mounted () {
