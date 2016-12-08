@@ -1,4 +1,4 @@
-import 'mint-ui/lib/style.css'
+// import 'mint-ui/lib/style.css'
 import Vue from 'vue';
 import App from './App.vue';
 import store from './store';

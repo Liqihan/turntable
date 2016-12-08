@@ -78,9 +78,9 @@ export default {
     }
    .lottery-container {
         position: relative;
-        margin: 10px auto;
-        width: 320px;
-        height: 320px;
+        margin: 0 auto;
+        width: 640px;
+        height: 640px;
         .twinkle-img {
             -webkit-animation: autorotate 12s steps(20, start) 0s infinite normal;
             animation: autorotate 12s steps(25, start) 0s infinite normal;

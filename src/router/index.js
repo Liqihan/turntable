@@ -6,7 +6,7 @@ Vue.use(Router)
 import baseUsage from '../component/baseUsage.vue';
 import date from '../component/date.vue';
 import city from '../view/city.vue';
-import award from '../component/award.vue';
+import award from '../view/award.vue';
 import index from '../view/index.vue';
 import test from '../view/test.vue';
 

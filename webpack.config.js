@@ -42,9 +42,9 @@ module.exports = {
         }]
 	},
     
-	postcss: [autoprefixer({browsers: ['> 5%']}),px2rem({remUnit: 75})],
+	// postcss: [autoprefixer({browsers: ['> 5%']}),px2rem({remUnit: 75})],
 	vue: {
-		 postcss: [require('postcss-px2rem')({remUnit: 75})],
+		//  postcss: [require('postcss-px2rem')({remUnit: 75})],
 		 css: 'style!css!autoprefixer'
 		// loaders: {
 		// 	css: 'style!css!autoprefixer',

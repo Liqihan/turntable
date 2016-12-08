@@ -33,19 +33,26 @@ export default {
         display:flex;
         justify-content:space-between;        
         flex-wrap: wrap;
-        width:360px;
+        width:690px;
+        margin:0 auto;
         .sponsor-item{
-            width:115px;
+            width:220px;
+            box-sizing:border-box;
             text-align:center;
             .sponsor-img{
-                border:1px solid #f5f5f5;                
+                border:1px solid #e0e0e0;                
                 width:100%;
-                height:40px;
+                height:70px;
                 overflow:hidden;                            
             }
             img{
                 width:100%;
                 height:auto;
+            }
+            .sponsor-name{
+                line-height: 45px;
+                font-size: 22px;/*px*/
+                color:#666;
             }
         }
     }

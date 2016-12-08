@@ -6,8 +6,9 @@
         </router-link>
         <mt-button slot="right">保存</mt-button>
     </mt-header>
-    <award-item :items="items"></award-item>
-    <p>hahah </p>
+    <div class="award-bg">
+        <award-item :items="items"></award-item>
+    </div>
   </div>
 
 </template>
@@ -31,9 +32,9 @@ export default {
                 {
                     "type":1,
                     "name":"aasss",
-                    "address":"aassssssss",
+                    "address":"浙江省爽肤水是对冯绍峰水淀粉水淀粉舒服",
                     "tel":"asdfsdfsdf",
-                    "awardName":"sdfsf",
+                    "awardName":"三等奖",
                     "award":"小苹果一台"
                 },
                 {
@@ -41,7 +42,7 @@ export default {
                     "name":"aasss",
                     "address":"aassssssss",
                     "tel":"asdfsdfsdf",
-                    "awardName":"sdfsf",
+                    "awardName":"阳光普照奖",
                     "award":"小苹果一台"
                 },
                 {
@@ -61,8 +62,9 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-    p{
-        background-color:red;
-        font-size:20px;
+
+    .award-bg{
+        background: #f7f7f7;
+        padding: 0 20px;
     }
 </style>
