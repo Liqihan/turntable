@@ -41378,6 +41378,10 @@ var _index = __webpack_require__(263);
 
 var _index2 = _interopRequireDefault(_index);
 
+var _test = __webpack_require__(290);
+
+var _test2 = _interopRequireDefault(_test);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _vue2.default.use(_vueRouter2.default);
@@ -41403,6 +41407,9 @@ exports.default = new _vueRouter2.default({
 	}, {
 		path: '/award',
 		component: _award2.default
+	}, {
+		path: '/test',
+		component: _test2.default
 	}]
 });
 
@@ -77530,6 +77537,260 @@ var app = new _vue2.default({
     return _render(_App2.default);
   }
 }).$mount('#app');
+
+/***/ },
+/* 288 */
+/***/ function(module, exports) {
+
+"use strict";
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+  data: function data() {
+    return {
+      show: false
+    };
+  },
+
+  components: {},
+  mounted: function mounted() {},
+
+  watch: {},
+  methods: {
+    toggleShow: function toggleShow() {
+      var self = this;
+      self.show = !self.show;
+      if (self.show) {}
+    },
+
+    //   showSponsor () {
+    //       console.log("11");
+    //       $("button").on("click", function (e) {
+    //         $("#modal-sponsor").addClass("active");
+    //         setTimeout(function () {
+    //             $("#modal-sponsor").addClass("transition");
+    //         }, 50);
+    //         $("#modal-sponsor").on("click", ".modal-close", function (e) {
+    //             $("#modal-sponsor").removeClass("active transition");
+    //             $(this).off("click");
+    //         })
+    //         $("#modal-sponsor").on("click", ".modal-action", function (e) {
+    //             $("#modal-sponsor").removeClass("active transition");
+    //             $(this).off("click");
+    //         })
+    //     })
+    //   },
+    beforeEnter: function beforeEnter(el) {
+      //   el.style.opacity = 0
+      // el.style.display = "block";
+      setTimeout(function () {
+        el.classList.add("transition");
+      }, 200);
+    },
+    enter: function enter(el, done) {
+      //   Velocity(el, { opacity: 1, fontSize: '1.4em' }, { duration: 300 })
+      //   Velocity(el, { fontSize: '1em' }, { complete: done })
+    },
+    leave: function leave(el, done) {
+      Velocity(el, { translateX: '15px', rotateZ: '50deg' }, { duration: 600 });
+      Velocity(el, { rotateZ: '100deg' }, { loop: 2 });
+      Velocity(el, {
+        rotateZ: '45deg',
+        translateY: '30px',
+        translateX: '30px',
+        opacity: 0
+      }, { complete: done });
+    }
+  }
+};
+
+/***/ },
+/* 289 */,
+/* 290 */
+/***/ function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = {}
+
+/* styles */
+__webpack_require__(294)
+
+/* script */
+__vue_exports__ = __webpack_require__(288)
+
+/* template */
+var __vue_template__ = __webpack_require__(291)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "/home/grove/code/work/turntable/turntable/src/view/test.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-1c746a9e", __vue_options__)
+  } else {
+    hotAPI.reload("data-v-1c746a9e", __vue_options__)
+  }
+})()}
+if (__vue_options__.functional) {console.error("[vue-loader] test.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+module.exports = __vue_exports__
+
+
+/***/ },
+/* 291 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
+  return _h('div', [_h('footer', {
+    directives: [{
+      name: "touch",
+      rawName: "v-touch:tap",
+      value: (_vm.toggleShow),
+      expression: "toggleShow",
+      arg: "tap"
+    }],
+    staticClass: "vote-sponsor"
+  }, [_h('img', {
+    attrs: {
+      "src": "http://img.benditoutiao.com/handwork_20161122/e2978da0-b064-11e6-98d8-717e44dd841c.png@!titleSponser",
+      "alt": ""
+    }
+  }), " ", _h('span', ["感谢本地头条对本次活动的大力支持"])]), " ", _h('transition', {
+    attrs: {
+      "css": false
+    },
+    on: {
+      "before-enter": _vm.beforeEnter,
+      "enter": _vm.enter,
+      "leave": _vm.leave
+    }
+  }, [_h('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.show),
+      expression: "show"
+    }],
+    staticClass: "modal",
+    attrs: {
+      "id": "modal-sponsor"
+    }
+  }, [_h('div', {
+    staticClass: "modal-container"
+  }, [_h('div', {
+    staticClass: "modal-wrap"
+  }, [_h('i', {
+    staticClass: "modal-close",
+    attrs: {
+      "data-dismiss": "modal"
+    }
+  }), " ", _h('div', {
+    staticClass: "modal-content"
+  }, ["\n                  assssssssssss\n                  "]), " ", _h('div', {
+    staticClass: "modal-action"
+  }, [_h('a', {
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, ["我知道了"])])])])])])])
+},staticRenderFns: []}
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-1c746a9e", module.exports)
+  }
+}
+
+/***/ },
+/* 292 */,
+/* 293 */
+/***/ function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)();
+// imports
+
+
+// module
+exports.push([module.i, "button {\n  font-size: 0.4rem;\n}\n\nfooter.vote-sponsor {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  margin: 0 auto;\n  width: 10rem;\n  height: 1.333333rem;\n  overflow: hidden;\n  line-height: 1.333333rem;\n  color: #fff;\n  background-color: rgba(0, 0, 0, 0.8);\n  text-align: center;\n  z-index: 23;\n}\n\n[data-dpr=\"1\"] footer.vote-sponsor {\n  font-size: 16px;\n}\n\n[data-dpr=\"2\"] footer.vote-sponsor {\n  font-size: 32px;\n}\n\n[data-dpr=\"3\"] footer.vote-sponsor {\n  font-size: 48px;\n}\n\nfooter.vote-sponsor img {\n  width: 1.866667rem;\n  max-height: 1.133333rem;\n  position: absolute;\n  left: 0.266667rem;\n  top: 50%;\n  transform: translate(0, -50%);\n}\n\nfooter.vote-sponsor span {\n  position: absolute;\n  top: 50%;\n  transform: translate(0, -50%);\n  left: 2.4rem;\n  right: 0.266667rem;\n  text-align: left;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n\n.modal {\n  display: block;\n  z-index: 150;\n  position: fixed;\n  left: 0;\n  top: 0;\n  width: 100%;\n}\n\n.modal.active {\n  display: block;\n}\n\n.modal .modal-container {\n  opacity: 0;\n  transition: opacity .3s ease-out;\n  height: 40rem;\n  max-height: 40rem;\n  padding: 2.666667rem 0;\n  box-sizing: border-box;\n  background: rgba(0, 0, 0, 0.6);\n}\n\n.modal.transition .modal-container {\n  opacity: 1;\n}\n\n.modal .modal-wrap {\n  width: 7.666667rem;\n  background: #fff;\n  opacity: 0;\n  transform: translateY(100%);\n  transition: opacity 0.25s ease-out 0.05s, transform 0.25s cubic-bezier(0, 0, 0, 1) 0.05s;\n  position: relative;\n  margin: 0 auto;\n  border-radius: 0.133333rem;\n}\n\n[data-dpr=\"1\"] .modal .modal-wrap {\n  border: 2px solid transparent;\n}\n\n[data-dpr=\"2\"] .modal .modal-wrap {\n  border: 4px solid transparent;\n}\n\n[data-dpr=\"3\"] .modal .modal-wrap {\n  border: 6px solid transparent;\n}\n\n.modal.transition .modal-wrap {\n  opacity: 1;\n  transform: translateY(0);\n}\n\n.modal-close {\n  position: absolute;\n  right: -0.973333rem;\n  top: -0.973333rem;\n  width: 0.733333rem;\n  height: 0.733333rem;\n  border: 0.666667rem solid transparent;\n  background: url(http://benditoutiao.oss-cn-hangzhou.aliyuncs.com/fore-end/app/vote-img/model_close1.png) no-repeat center center;\n  border-radius: 50%;\n  background-size: cover;\n}\n\n.modal-invite-logo {\n  position: absolute;\n  width: 4.533333rem;\n  height: 1.16rem;\n  top: -0.666667rem;\n  left: 1.6rem;\n  background: url(http://benditoutiao.oss-cn-hangzhou.aliyuncs.com/fore-end/app/vote-img/model_3.png) no-repeat center center;\n  background-size: 100% 100%;\n}\n\n.modal-activity-logo {\n  position: absolute;\n  width: 4.533333rem;\n  height: 1.16rem;\n  top: -0.666667rem;\n  left: 1.6rem;\n  background: url(http://benditoutiao.oss-cn-hangzhou.aliyuncs.com/fore-end/app/vote-img/model_1.png) no-repeat center center;\n  background-size: 100% 100%;\n}\n\n.modal-vote-logo {\n  position: absolute;\n  width: 4.533333rem;\n  height: 1.16rem;\n  top: -0.666667rem;\n  left: 1.6rem;\n  background: url(http://benditoutiao.oss-cn-hangzhou.aliyuncs.com/fore-end/app/vote-img/model_2.png) no-repeat center center;\n  background-size: 100% 100%;\n}\n\n.modal-content {\n  padding: 0 0.466667rem;\n  word-break: break-all;\n  color: #333;\n  margin: 1.2rem 0.4rem 0.266667rem;\n  overflow-y: auto;\n  overflow-x: hidden;\n  min-height: 4rem;\n  max-height: 6.666667rem;\n}\n\n[data-dpr=\"1\"] .modal-content {\n  font-size: 14px;\n}\n\n[data-dpr=\"2\"] .modal-content {\n  font-size: 28px;\n}\n\n[data-dpr=\"3\"] .modal-content {\n  font-size: 42px;\n}\n\n.modal-content p {\n  width: 5.973333rem;\n  margin: 0 auto;\n}\n\n[data-dpr=\"1\"] .modal-content * {\n  font-size: 16px !important;\n}\n\n[data-dpr=\"2\"] .modal-content * {\n  font-size: 32px !important;\n}\n\n[data-dpr=\"3\"] .modal-content * {\n  font-size: 48px !important;\n}\n\n.modal-action {\n  padding: 0.32rem;\n}\n\n.modal-action a {\n  display: block;\n  width: 6.666667rem;\n  height: 1.066667rem;\n  margin: 0 auto;\n  color: #fff;\n  line-height: 1.066667rem;\n  text-align: center;\n  border-radius: 4px;\n  background-color: #dd675a;\n}\n\n[data-dpr=\"1\"] .modal-action a {\n  font-size: 16px;\n}\n\n[data-dpr=\"2\"] .modal-action a {\n  font-size: 32px;\n}\n\n[data-dpr=\"3\"] .modal-action a {\n  font-size: 48px;\n}", ""]);
+
+// exports
+
+
+/***/ },
+/* 294 */
+/***/ function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(293);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(4)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-1c746a9e!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./test.vue", function() {
+			var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-1c746a9e!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./test.vue");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
 
 /***/ }
 /******/ ]);
