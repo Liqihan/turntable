@@ -204,9 +204,7 @@
 				<slot class="bottom-content" name="bottom-content"></slot>
 			</div>
 
-		</div>            // <mt-cell v-for="n in 10" :title="'内容 ' + n" />
-
-
+		</div>           
 	</transition>
 
 </template>
@@ -214,14 +212,7 @@
 <script>
 
 	import Vue from 'vue';
-            // <mt-cell v-for="n in 10" :title="'内容 ' + n" />
-
-	import VueTouch from 'vue-touch';
-
-	import { EaseOutEasing, BounceEasing, MomentumEasing, BoundMomentumEasing } from './animation';
-
-	Vue.use(VueTouch);
-	
+	import { EaseOutEasing, BounceEasing, MomentumEasing, BoundMomentumEasing } from '../asset/animation';
 	export default {
 
 		name: 'picker',

@@ -3,7 +3,7 @@
     <div class="lottery-container">
         <img class="bg-img" src="http://kano.guahao.cn/Pik3712488?token=bmFjRng2Ykh6WGdJRVRDek1ZQjFDdz09X1RJTUVfQUVTCOUSTOM" alt="">
         <img class="twinkle-img" :src="twinkleImg" alt="">
-        <img class="btn-img" v-on:click="clickMe" src="http://kano.guahao.cn/G4P3712922?token=bHRLcWdtLzBXaWxFWXpRc0tPOUtQUT09X1RJTUVfQUVTCOUSTOM">
+        <img class="btn-img" v-touch:tap="clickMe" src="http://kano.guahao.cn/G4P3712922?token=bHRLcWdtLzBXaWxFWXpRc0tPOUtQUT09X1RJTUVfQUVTCOUSTOM">
     </div>
   </div>
 

@@ -1,20 +1,16 @@
 import 'mint-ui/lib/style.css'
 import Vue from 'vue';
 import App from './App.vue';
+import store from './store';
 import VueResource from 'vue-resource';
 import router from './router';
+import VueTouch from 'vue-touch';
+
 // var $ = require("jquery");
-
-
-import picker from './component/picker.vue';
-
-Vue.component(picker.name, picker);
-
 // 自己写的组件
 import awardItem from './component/award-item.vue'
 Vue.component(awardItem.name, awardItem)
-import turnTable from './component/turn-table.vue'
-Vue.component(turnTable.name, turnTable)
+
 import sponsorList from './component/sponsor-list.vue'
 Vue.component(sponsorList.name, sponsorList)
 
@@ -35,9 +31,11 @@ Vue.component(TabContainer.name, TabContainer);
 Vue.component(TabContainerItem.name, TabContainerItem);
 
 Vue.use(VueResource);
+Vue.use(VueTouch);
 
 
 const app = new Vue({
   router: router,
+  store:store,
   render: render => render(App),
 }).$mount('#app')

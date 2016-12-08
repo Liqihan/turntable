@@ -29,11 +29,15 @@
 <script>
 import _ from 'lodash'
 import myScroll from '../asset/myScroll.js'
+import turnTable from '../component/turn-table.vue'
 export default {
   data() {
     return {
       selected:"1",
     }
+  },
+  components: {
+      turnTable
   },
   mounted () {
       var a = new myScroll(".auto-play",{

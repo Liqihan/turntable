@@ -22,14 +22,13 @@
 </template>
 
 <script>
+import picker from '../component/picker.vue';
 export default {
   data() {
-
     return {
       visible: false,
       cityItems: [],
       text: '请选择',
-      prompt: 'Being loaded...',
       provinces: [], 
       lastProvince: {},
       citys: [],
@@ -38,19 +37,21 @@ export default {
       lastRegion: {}
     }
   },
+  components: {
+    picker
+  },
   mounted () {
+    let self = this;
+
     let provinces = [], lastProvince,
         citys = [],lastCity,
         regions = [],lastRegion;
 
-    this.$http.get('/src/component/all.json').then((result) => {
+    this.$http.get('/src/asset/region.json').then((result) => {
       var self = this;
       // let city = result.data.result.city;
-      let country = result.data[0];
-      this.prompt = 'open';
-      self.provinces = _.map(country.children,function(value,key){
-        return value;
-      })
+      let country = result.data.data;
+      self.provinces = country;
       lastProvince = self.provinces[0];
       self.lastProvince = self.provinces[0];
       self.citys = self.lastProvince.children;
@@ -58,15 +59,15 @@ export default {
       self.regions = self.lastCity.children;
       self.lastRegion = self.regions[0];
       this.cityItems = [{
-        name:'text',
+        name:'label',
         width: '33%',
         values: self.provinces
       },{
-        name: 'text',
+        name: 'label',
         width: '33%',
         values: self.citys
       },{
-        name: 'text',
+        name: 'label',
         width: '33%',
         values: self.regions
       }];
@@ -74,9 +75,6 @@ export default {
 
   },
   watch:{
-    visible:function(){
-      console.log(arguments);
-    }
   },
   methods: {
     onCityValuesChange (result, pickerEl, reset) {
@@ -85,7 +83,7 @@ export default {
       let thisProvince = province ? province : self.lastProvince,
           thisCity = city ? city : self.lastCity,
           thisRegion = region ? region : self.lastRegion;
-      this.text = `${thisProvince.text}\/ ${thisCity.text}\/ ${thisRegion.text}`;
+      this.text = `${thisProvince.label}\/ ${thisCity.label}\/ ${thisRegion.label}`;
       if (self.lastProvince !== thisProvince) {
         self.lastProvince = thisProvince;
         self.citys = self.lastProvince.children;

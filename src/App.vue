@@ -1,9 +1,6 @@
 <template>
   <div class="view-wrapper">
-
-    <transition :name="transitionName">
       <router-view class="view"></router-view>
-    </transition>
   </div>
 
 </template>
