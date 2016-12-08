@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
-let autoprefixer = require('autoprefixer')
+let autoprefixer = require('autoprefixer');
+var px2rem = require('postcss-px2rem');
 module.exports = {
 	entry: './src/main.js',
 	output: {
@@ -41,11 +42,14 @@ module.exports = {
         }]
 	},
     
-	postcss: [autoprefixer({browsers: ['> 5%']})],
+	postcss: [autoprefixer({browsers: ['> 5%']}),px2rem({remUnit: 75})],
 	vue: {
-		loaders: {
-			css: 'style!css!autoprefixer',
-		}
+		 postcss: [require('postcss-px2rem')({remUnit: 75})],
+		 css: 'style!css!autoprefixer'
+		// loaders: {
+		// 	css: 'style!css!autoprefixer',
+		// 	postcss: [require('postcss-px2rem')({remUnit: 75})]
+		// }
 	},
 	babel: {
 		presets: ['es2015'],
