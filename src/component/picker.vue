@@ -96,7 +96,7 @@
 .picker-wrapper .picker-content {
 	position: relative;
 	width: 100%;
-	height: 216px;
+	height: 432px;
 	background: white;
 }
 
@@ -125,14 +125,14 @@
 .picker-wrapper .picker-helper:before{
 	content: '';
 	width: 100%;
-	height: 38px;
+	height: 76px;
 	border-top: 1px solid #adb0a7;
 	border-bottom: 1px solid #adb0a7;
 	display: flex;
 }
 
 .picker-wrapper .picker-item {
-	font-size: 14px;
+	font-size: 32px;/*px*/
 	height: 100%;
 	position: relative;
 	overflow: hidden;
@@ -148,7 +148,7 @@
 	perspective-origin: center center;
 	position: relative;
 	width: 100%;
-	height: 38px;
+	height: 76px;
 	border-top: 1px solid #adb0a7;
 	border-bottom: 1px solid #adb0a7;
 }
@@ -156,14 +156,14 @@
 .picker-item-container>div{
 	position: absolute;
 	width: 100%;
-	height: 36px;
+	height: 74px;
 	opacity: 0.3;
 	overflow: hidden;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	transform-origin: center center -110px;
+	transform-origin: center center -220px;
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 }

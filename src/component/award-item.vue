@@ -35,7 +35,7 @@
                     <div class="award-desc">
                         <span class="award-title">充值号码:</span>{{item.tel}}
                     </div>
-                    <buttton class="get-award">领取</buttton>
+                    <div class="get-award">领取</div>
                 </div>
             </div>
         </template>
@@ -99,6 +99,7 @@ export default {
         display: block;
         width:210px;
         height: 55px;
+        font-size: 28px;
         margin: 20px auto;
         line-height: 55px;
         text-align: center;

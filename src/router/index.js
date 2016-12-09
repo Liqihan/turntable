@@ -5,7 +5,7 @@ Vue.use(Router)
 
 import baseUsage from '../component/baseUsage.vue';
 import date from '../component/date.vue';
-import city from '../view/city.vue';
+import addAddress from '../view/addAddress.vue';
 import award from '../view/award.vue';
 import index from '../view/index.vue';
 import test from '../view/test.vue';
@@ -26,8 +26,8 @@ export default new Router({
 		path: '/date',
 		component: date
 	}, {
-		path: '/city',
-		component: city
+		path: '/addAddress',
+		component: addAddress
 	}, {
 		path: '/award',
 		component: award
