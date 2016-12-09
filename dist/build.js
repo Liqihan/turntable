@@ -43087,6 +43087,10 @@ var _test = __webpack_require__(265);
 
 var _test2 = _interopRequireDefault(_test);
 
+var _myAddress = __webpack_require__(296);
+
+var _myAddress2 = _interopRequireDefault(_myAddress);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _vue2.default.use(_vueRouter2.default);
@@ -43115,6 +43119,9 @@ exports.default = new _vueRouter2.default({
 	}, {
 		path: '/test',
 		component: _test2.default
+	}, {
+		path: '/myAddress',
+		component: _myAddress2.default
 	}]
 });
 
@@ -77829,6 +77836,190 @@ if(false) {
 	if(!content.locals) {
 		module.hot.accept("!!./../../node_modules/.0.16.0@css-loader/index.js!./../../node_modules/.9.9.5@vue-loader/lib/style-rewriter.js?id=data-v-718bff87&scoped=true!./../../node_modules/.3.2.3@sass-loader/index.js!./../../node_modules/.9.9.5@vue-loader/lib/selector.js?type=styles&index=0!./addAddress.vue", function() {
 			var newContent = require("!!./../../node_modules/.0.16.0@css-loader/index.js!./../../node_modules/.9.9.5@vue-loader/lib/style-rewriter.js?id=data-v-718bff87&scoped=true!./../../node_modules/.3.2.3@sass-loader/index.js!./../../node_modules/.9.9.5@vue-loader/lib/selector.js?type=styles&index=0!./addAddress.vue");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ },
+/* 293 */,
+/* 294 */,
+/* 295 */
+/***/ function(module, exports) {
+
+"use strict";
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+    data: function data() {
+        return {
+            data: ""
+        };
+    }
+};
+
+/***/ },
+/* 296 */
+/***/ function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = {}
+
+/* styles */
+__webpack_require__(301)
+
+/* script */
+__vue_exports__ = __webpack_require__(295)
+
+/* template */
+var __vue_template__ = __webpack_require__(297)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "/Users/lqh/grove/personal/demo/turntable/src/view/myAddress.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-68287564"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-68287564", __vue_options__)
+  } else {
+    hotAPI.reload("data-v-68287564", __vue_options__)
+  }
+})()}
+if (__vue_options__.functional) {console.error("[vue-loader] myAddress.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+module.exports = __vue_exports__
+
+
+/***/ },
+/* 297 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
+  return _h('div', [_vm._m(0), " ", _h('router-link', {
+    attrs: {
+      "to": "/addAddress"
+    }
+  }, [_h('dvi', {
+    staticClass: "add-address"
+  }, ["\n            新增地址\n        "])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;
+  return _h('ul', {
+    staticClass: "address-list"
+  }, [_h('li', {
+    staticClass: "address-item"
+  }, [_h('div', {
+    staticClass: "item-top"
+  }, [_h('div', {
+    staticClass: "item-name"
+  }, ["灵川"]), " ", _h('div', {
+    staticClass: "item-tel"
+  }, ["12244242424"])]), " ", _h('div', {
+    staticClass: "item-bottom"
+  }, ["\n                浙江省好难过算法这是共商国是说过的是共商国是的根深蒂固说共商国是的根深蒂固说过的阿斯顿发法师打发算法算法是送给\n            "])]), " ", _h('li', {
+    staticClass: "address-item"
+  }, [_h('div', {
+    staticClass: "item-top"
+  }, [_h('div', {
+    staticClass: "item-name"
+  }, ["灵川"]), " ", _h('div', {
+    staticClass: "item-tel"
+  }, ["12244242424"])]), " ", _h('div', {
+    staticClass: "item-bottom"
+  }, ["\n                阿斯顿发法师打发算法算法是送给\n            "])])])
+}]}
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-68287564", module.exports)
+  }
+}
+
+/***/ },
+/* 298 */,
+/* 299 */,
+/* 300 */
+/***/ function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)();
+// imports
+
+
+// module
+exports.push([module.i, "\nul[data-v-68287564] {\n  background: #fff;\n}\nul .address-item[data-v-68287564] {\n    border-bottom: 1px solid #e8e8e8;\n    padding: 0 25px 25px;\n    font-size: 28px;\n    /*px*/\n}\nul .item-top[data-v-68287564] {\n    line-height: 75px;\n    overflow: hidden;\n    font-weight: 450;\n}\nul .item-bottom[data-v-68287564] {\n    color: #333;\n    line-height: 1.4;\n}\nul .item-name[data-v-68287564] {\n    float: left;\n}\nul .item-tel[data-v-68287564] {\n    float: right;\n}\n.add-address[data-v-68287564] {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  /*display: block;*/\n  width: 750px;\n  height: 100px;\n  line-height: 100px;\n  font-size: 32px;\n  /*px*/\n  color: #fff;\n  background: #f45c3a;\n  text-align: center;\n}\n", ""]);
+
+// exports
+
+
+/***/ },
+/* 301 */
+/***/ function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(300);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(3)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!./../../node_modules/.0.16.0@css-loader/index.js!./../../node_modules/.9.9.5@vue-loader/lib/style-rewriter.js?id=data-v-68287564&scoped=true!./../../node_modules/.3.2.3@sass-loader/index.js!./../../node_modules/.9.9.5@vue-loader/lib/selector.js?type=styles&index=0!./myAddress.vue", function() {
+			var newContent = require("!!./../../node_modules/.0.16.0@css-loader/index.js!./../../node_modules/.9.9.5@vue-loader/lib/style-rewriter.js?id=data-v-68287564&scoped=true!./../../node_modules/.3.2.3@sass-loader/index.js!./../../node_modules/.9.9.5@vue-loader/lib/selector.js?type=styles&index=0!./myAddress.vue");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});

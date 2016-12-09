@@ -9,6 +9,7 @@ import addAddress from '../view/addAddress.vue';
 import award from '../view/award.vue';
 import index from '../view/index.vue';
 import test from '../view/test.vue';
+import myAddress from '../view/myAddress.vue';
 
 export default new Router({
 	//   mode: 'history',
@@ -34,5 +35,8 @@ export default new Router({
 	}, {
 		path: '/test',
 		component: test
+	}, {
+		path: '/myAddress',
+		component: myAddress
 	}]
 })
