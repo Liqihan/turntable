@@ -170,7 +170,7 @@ export default {
     display: flex;
     height: 107px;
     align-items: center;
-    color:#e0e0e0;
+    color:#ccc;
     border-bottom: 1px solid #e0e0e0;
   }
 }
@@ -188,21 +188,21 @@ input,textarea{
   flex: 1;
   outline:0;
   line-height: 1.6;
-  color:#999;
+  color:#ccc;
   font-size: inherit;
   width: 100%; 
 }
 input::-webkit-input-placeholder{
-  color:#e0e0e0;
+  color:#ccc;
 }
 input::-moz-placeholder{
-  color:#e0e0e0;
+  color:#ccc;
 }
 input:-moz-placeholder{
-  color:#e0e0e0;
+  color:#ccc;
 }
 input:-ms-input-placeholder{
-  color:#e0e0e0;
+  color:#ccc;
 }
   .mint-field-core{
     -webkit-appearance: none;
