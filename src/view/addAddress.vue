@@ -106,8 +106,8 @@ export default {
   },
   methods: {
     formCheck () {
-      
-    }
+
+    },
     onCityValuesChange (result, pickerEl, reset) {
       var self = this;
       let province = result[0], city = result[1],region = result[2];

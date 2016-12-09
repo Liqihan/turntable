@@ -53053,7 +53053,20 @@ exports.push([module.i, "\nbutton {\n  font-size: 30px;\n}\nfooter.vote-sponsor 
 
 
 /***/ },
-/* 172 */,
+/* 172 */
+/***/ function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)();
+// imports
+
+
+// module
+exports.push([module.i, "\n@keyframes picker-close {\n0% {\n\t\ttransform: translateY(0%)\n}\n100% {\n\t\ttransform: translateY(100%);\n}\n}\n@keyframes picker-open {\n0% {\n\t\ttransform: translateY(100%);\n}\n100% {\n\t\ttransform: translateY(0);\n}\n}\n@keyframes picker-close-backdrop {\n0% {\n\t\topacity: 1;\n}\n50% {\n\t\topacity: 1;\n}\n100% {\n\t\topacity: 0;\n}\n}\n@keyframes picker-open-backdrop {\n0% {\n\t\topacity: 0;\n}\n50% {\n\t\topacity: 1;\n}\n100% {\n\t\topacity: 1;\n}\n}\n.picker-enter-active {\n\tanimation: picker-open-backdrop 0.3s ease-out;\n}\n.picker-enter-active .picker-wrapper {\n\tanimation: picker-open 0.3s ease;\n}\n.picker-leave-active {\n\tanimation: picker-close-backdrop 0.3s ease-out;\n}\n.picker-leave-active .picker-wrapper {\n\tanimation: picker-close 0.3s ease;\n}\n.picker-backdrop{\n\tposition: fixed;\n\tleft: 0;\n\ttop: 0;\n\twidth: 100%;\n\theight: 100%;\n\tbackground: rgba(0, 0, 0, 0.5);\n\tz-index: 999;\n}\n.picker-wrapper{\n\tposition: absolute;\n\tleft: 0;\n\tbottom: 0;\n\twidth: 100%;\n\tbackground: transparent;\n\ttransform: translate3d(0px, 0px, 0px);\n}\n.picker-wrapper .top-content, .picker-wrapper .bottom-content{\n\tdisplay: flex;\n\twidth: 100%;\n\tbackground-color: #fff;\n\tjustify-content: center;\n}\n.picker-wrapper .picker-content {\n\tposition: relative;\n\twidth: 100%;\n\theight: 432px;\n\tbackground: white;\n}\n.picker-wrapper .picker-body{\n\tposition: absolute;\n\twidth: 100%;\n\theight: 100%;\n\tdisplay: flex;\n\tflex-direction: row;\n\tjustify-content: center;\n}\n.picker-flex-body .picker-item{\n\tflex: 1;\n}\n.picker-wrapper .picker-helper{\n\tposition: absolute;\n\twidth: 100%;\n\theight: 100%;\n\tdisplay: flex;\n\tflex-direction: column;\n\tjustify-content: center;\n}\n.picker-wrapper .picker-helper:before{\n\tcontent: '';\n\twidth: 100%;\n\theight: 76px;\n\tborder-top: 1px solid #adb0a7;\n\tborder-bottom: 1px solid #adb0a7;\n\tdisplay: flex;\n}\n.picker-wrapper .picker-item {\n\tfont-size: 32px;/*px*/\n\theight: 100%;\n\tposition: relative;\n\toverflow: hidden;\n\tdisplay: flex;\n\tflex-direction: column;\n\tjustify-content: center;\n}\n.picker-item-container {\n\tperspective: 1200px;\n\tdisplay: flex;\n\ttransform-style: preserve-3d;\n\tperspective-origin: center center;\n\tposition: relative;\n\twidth: 100%;\n\theight: 76px;\n\tborder-top: 1px solid #adb0a7;\n\tborder-bottom: 1px solid #adb0a7;\n}\n.picker-item-container>div{\n\tposition: absolute;\n\twidth: 100%;\n\theight: 74px;\n\topacity: 0.3;\n\toverflow: hidden;\n\tdisplay: flex;\n\tflex-direction: row;\n\talign-items: center;\n\tjustify-content: center;\n\ttransform-origin: center center -220px;\n\tbackface-visibility: hidden;\n\t-webkit-backface-visibility: hidden;\n}\n.picker-item-container>div.scroller-is-current{\n\topacity: 1;\n}\n\n", ""]);
+
+// exports
+
+
+/***/ },
 /* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -53217,7 +53230,32 @@ if(false) {
 }
 
 /***/ },
-/* 183 */,
+/* 183 */
+/***/ function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(172);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(3)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!./../../node_modules/.0.16.0@css-loader/index.js!./../../node_modules/.9.9.5@vue-loader/lib/style-rewriter.js?id=data-v-4169e5f4!./../../node_modules/.9.9.5@vue-loader/lib/selector.js?type=styles&index=0!./picker.vue", function() {
+			var newContent = require("!!./../../node_modules/.0.16.0@css-loader/index.js!./../../node_modules/.9.9.5@vue-loader/lib/style-rewriter.js?id=data-v-4169e5f4!./../../node_modules/.9.9.5@vue-loader/lib/selector.js?type=styles&index=0!./picker.vue");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ },
 /* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -53407,8 +53445,24 @@ module.exports = function (arr, predicate, ctx) {
 
 
 /***/ },
-/* 192 */,
-/* 193 */,
+/* 192 */
+/***/ function(module, exports, __webpack_require__) {
+
+var $ = __webpack_require__(2);
+module.exports = function create(P, D){
+  return $.create(P, D);
+};
+
+/***/ },
+/* 193 */
+/***/ function(module, exports, __webpack_require__) {
+
+var $ = __webpack_require__(2);
+module.exports = function defineProperties(T, D){
+  return $.setDescs(T, D);
+};
+
+/***/ },
 /* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -53418,8 +53472,20 @@ module.exports = function defineProperty(it, key, desc){
 };
 
 /***/ },
-/* 195 */,
-/* 196 */,
+/* 195 */
+/***/ function(module, exports, __webpack_require__) {
+
+__webpack_require__(227);
+module.exports = __webpack_require__(5).Object.getPrototypeOf;
+
+/***/ },
+/* 196 */
+/***/ function(module, exports, __webpack_require__) {
+
+__webpack_require__(228);
+module.exports = __webpack_require__(5).Object.setPrototypeOf;
+
+/***/ },
 /* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -53430,7 +53496,14 @@ __webpack_require__(229);
 module.exports = __webpack_require__(5).Promise;
 
 /***/ },
-/* 198 */,
+/* 198 */
+/***/ function(module, exports, __webpack_require__) {
+
+__webpack_require__(231);
+__webpack_require__(36);
+module.exports = __webpack_require__(5).Symbol;
+
+/***/ },
 /* 199 */
 /***/ function(module, exports) {
 
@@ -53449,7 +53522,25 @@ module.exports = function(it){
 };
 
 /***/ },
-/* 201 */,
+/* 201 */
+/***/ function(module, exports, __webpack_require__) {
+
+// all enumerable object keys, includes symbols
+var $ = __webpack_require__(2);
+module.exports = function(it){
+  var keys       = $.getKeys(it)
+    , getSymbols = $.getSymbols;
+  if(getSymbols){
+    var symbols = getSymbols(it)
+      , isEnum  = $.isEnum
+      , i       = 0
+      , key;
+    while(symbols.length > i)if(isEnum.call(it, key = symbols[i++]))keys.push(key);
+  }
+  return keys;
+};
+
+/***/ },
 /* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -53474,7 +53565,31 @@ module.exports = function(iterable, entries, fn, that){
 };
 
 /***/ },
-/* 203 */,
+/* 203 */
+/***/ function(module, exports, __webpack_require__) {
+
+// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
+var toIObject = __webpack_require__(18)
+  , getNames  = __webpack_require__(2).getNames
+  , toString  = {}.toString;
+
+var windowNames = typeof window == 'object' && Object.getOwnPropertyNames
+  ? Object.getOwnPropertyNames(window) : [];
+
+var getWindowNames = function(it){
+  try {
+    return getNames(it);
+  } catch(e){
+    return windowNames.slice();
+  }
+};
+
+module.exports.get = function getOwnPropertyNames(it){
+  if(windowNames && toString.call(it) == '[object Window]')return getWindowNames(it);
+  return getNames(toIObject(it));
+};
+
+/***/ },
 /* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -53525,7 +53640,16 @@ module.exports = function(it){
 };
 
 /***/ },
-/* 208 */,
+/* 208 */
+/***/ function(module, exports, __webpack_require__) {
+
+// 7.2.2 IsArray(argument)
+var cof = __webpack_require__(11);
+module.exports = Array.isArray || function(arg){
+  return cof(arg) == 'Array';
+};
+
+/***/ },
 /* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -53596,7 +53720,21 @@ module.exports = function(done, value){
 };
 
 /***/ },
-/* 213 */,
+/* 213 */
+/***/ function(module, exports, __webpack_require__) {
+
+var $         = __webpack_require__(2)
+  , toIObject = __webpack_require__(18);
+module.exports = function(object, el){
+  var O      = toIObject(object)
+    , keys   = $.getKeys(O)
+    , length = keys.length
+    , index  = 0
+    , key;
+  while(length > index)if(O[key = keys[index++]] === el)return key;
+};
+
+/***/ },
 /* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -53666,7 +53804,21 @@ module.exports = function asap(fn){
 };
 
 /***/ },
-/* 215 */,
+/* 215 */
+/***/ function(module, exports, __webpack_require__) {
+
+// most Object methods by ES6 should accept primitives
+var $export = __webpack_require__(13)
+  , core    = __webpack_require__(5)
+  , fails   = __webpack_require__(21);
+module.exports = function(KEY, exec){
+  var fn  = (core.Object || {})[KEY] || Object[KEY]
+    , exp = {};
+  exp[KEY] = exec(fn);
+  $export($export.S + $export.F * fails(function(){ fn(1); }), 'Object', exp);
+};
+
+/***/ },
 /* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -53840,7 +53992,16 @@ module.exports = function(it){
 };
 
 /***/ },
-/* 224 */,
+/* 224 */
+/***/ function(module, exports, __webpack_require__) {
+
+// 7.1.13 ToObject(argument)
+var defined = __webpack_require__(20);
+module.exports = function(it){
+  return Object(defined(it));
+};
+
+/***/ },
 /* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -53894,8 +54055,27 @@ addToUnscopables('values');
 addToUnscopables('entries');
 
 /***/ },
-/* 227 */,
-/* 228 */,
+/* 227 */
+/***/ function(module, exports, __webpack_require__) {
+
+// 19.1.2.9 Object.getPrototypeOf(O)
+var toObject = __webpack_require__(224);
+
+__webpack_require__(215)('getPrototypeOf', function($getPrototypeOf){
+  return function getPrototypeOf(it){
+    return $getPrototypeOf(toObject(it));
+  };
+});
+
+/***/ },
+/* 228 */
+/***/ function(module, exports, __webpack_require__) {
+
+// 19.1.3.19 Object.setPrototypeOf(O, proto)
+var $export = __webpack_require__(13);
+$export($export.S, 'Object', {setPrototypeOf: __webpack_require__(32).set});
+
+/***/ },
 /* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -54218,7 +54398,239 @@ __webpack_require__(31)(String, 'String', function(iterated){
 });
 
 /***/ },
-/* 231 */,
+/* 231 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+'use strict';
+// ECMAScript 6 symbols shim
+var $              = __webpack_require__(2)
+  , global         = __webpack_require__(6)
+  , has            = __webpack_require__(22)
+  , DESCRIPTORS    = __webpack_require__(15)
+  , $export        = __webpack_require__(13)
+  , redefine       = __webpack_require__(26)
+  , $fails         = __webpack_require__(21)
+  , shared         = __webpack_require__(33)
+  , setToStringTag = __webpack_require__(17)
+  , uid            = __webpack_require__(35)
+  , wks            = __webpack_require__(4)
+  , keyOf          = __webpack_require__(213)
+  , $names         = __webpack_require__(203)
+  , enumKeys       = __webpack_require__(201)
+  , isArray        = __webpack_require__(208)
+  , anObject       = __webpack_require__(8)
+  , toIObject      = __webpack_require__(18)
+  , createDesc     = __webpack_require__(25)
+  , getDesc        = $.getDesc
+  , setDesc        = $.setDesc
+  , _create        = $.create
+  , getNames       = $names.get
+  , $Symbol        = global.Symbol
+  , $JSON          = global.JSON
+  , _stringify     = $JSON && $JSON.stringify
+  , setter         = false
+  , HIDDEN         = wks('_hidden')
+  , isEnum         = $.isEnum
+  , SymbolRegistry = shared('symbol-registry')
+  , AllSymbols     = shared('symbols')
+  , useNative      = typeof $Symbol == 'function'
+  , ObjectProto    = Object.prototype;
+
+// fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687
+var setSymbolDesc = DESCRIPTORS && $fails(function(){
+  return _create(setDesc({}, 'a', {
+    get: function(){ return setDesc(this, 'a', {value: 7}).a; }
+  })).a != 7;
+}) ? function(it, key, D){
+  var protoDesc = getDesc(ObjectProto, key);
+  if(protoDesc)delete ObjectProto[key];
+  setDesc(it, key, D);
+  if(protoDesc && it !== ObjectProto)setDesc(ObjectProto, key, protoDesc);
+} : setDesc;
+
+var wrap = function(tag){
+  var sym = AllSymbols[tag] = _create($Symbol.prototype);
+  sym._k = tag;
+  DESCRIPTORS && setter && setSymbolDesc(ObjectProto, tag, {
+    configurable: true,
+    set: function(value){
+      if(has(this, HIDDEN) && has(this[HIDDEN], tag))this[HIDDEN][tag] = false;
+      setSymbolDesc(this, tag, createDesc(1, value));
+    }
+  });
+  return sym;
+};
+
+var isSymbol = function(it){
+  return typeof it == 'symbol';
+};
+
+var $defineProperty = function defineProperty(it, key, D){
+  if(D && has(AllSymbols, key)){
+    if(!D.enumerable){
+      if(!has(it, HIDDEN))setDesc(it, HIDDEN, createDesc(1, {}));
+      it[HIDDEN][key] = true;
+    } else {
+      if(has(it, HIDDEN) && it[HIDDEN][key])it[HIDDEN][key] = false;
+      D = _create(D, {enumerable: createDesc(0, false)});
+    } return setSymbolDesc(it, key, D);
+  } return setDesc(it, key, D);
+};
+var $defineProperties = function defineProperties(it, P){
+  anObject(it);
+  var keys = enumKeys(P = toIObject(P))
+    , i    = 0
+    , l = keys.length
+    , key;
+  while(l > i)$defineProperty(it, key = keys[i++], P[key]);
+  return it;
+};
+var $create = function create(it, P){
+  return P === undefined ? _create(it) : $defineProperties(_create(it), P);
+};
+var $propertyIsEnumerable = function propertyIsEnumerable(key){
+  var E = isEnum.call(this, key);
+  return E || !has(this, key) || !has(AllSymbols, key) || has(this, HIDDEN) && this[HIDDEN][key]
+    ? E : true;
+};
+var $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(it, key){
+  var D = getDesc(it = toIObject(it), key);
+  if(D && has(AllSymbols, key) && !(has(it, HIDDEN) && it[HIDDEN][key]))D.enumerable = true;
+  return D;
+};
+var $getOwnPropertyNames = function getOwnPropertyNames(it){
+  var names  = getNames(toIObject(it))
+    , result = []
+    , i      = 0
+    , key;
+  while(names.length > i)if(!has(AllSymbols, key = names[i++]) && key != HIDDEN)result.push(key);
+  return result;
+};
+var $getOwnPropertySymbols = function getOwnPropertySymbols(it){
+  var names  = getNames(toIObject(it))
+    , result = []
+    , i      = 0
+    , key;
+  while(names.length > i)if(has(AllSymbols, key = names[i++]))result.push(AllSymbols[key]);
+  return result;
+};
+var $stringify = function stringify(it){
+  if(it === undefined || isSymbol(it))return; // IE8 returns string on undefined
+  var args = [it]
+    , i    = 1
+    , $$   = arguments
+    , replacer, $replacer;
+  while($$.length > i)args.push($$[i++]);
+  replacer = args[1];
+  if(typeof replacer == 'function')$replacer = replacer;
+  if($replacer || !isArray(replacer))replacer = function(key, value){
+    if($replacer)value = $replacer.call(this, key, value);
+    if(!isSymbol(value))return value;
+  };
+  args[1] = replacer;
+  return _stringify.apply($JSON, args);
+};
+var buggyJSON = $fails(function(){
+  var S = $Symbol();
+  // MS Edge converts symbol values to JSON as {}
+  // WebKit converts symbol values to JSON as null
+  // V8 throws on boxed symbols
+  return _stringify([S]) != '[null]' || _stringify({a: S}) != '{}' || _stringify(Object(S)) != '{}';
+});
+
+// 19.4.1.1 Symbol([description])
+if(!useNative){
+  $Symbol = function Symbol(){
+    if(isSymbol(this))throw TypeError('Symbol is not a constructor');
+    return wrap(uid(arguments.length > 0 ? arguments[0] : undefined));
+  };
+  redefine($Symbol.prototype, 'toString', function toString(){
+    return this._k;
+  });
+
+  isSymbol = function(it){
+    return it instanceof $Symbol;
+  };
+
+  $.create     = $create;
+  $.isEnum     = $propertyIsEnumerable;
+  $.getDesc    = $getOwnPropertyDescriptor;
+  $.setDesc    = $defineProperty;
+  $.setDescs   = $defineProperties;
+  $.getNames   = $names.get = $getOwnPropertyNames;
+  $.getSymbols = $getOwnPropertySymbols;
+
+  if(DESCRIPTORS && !__webpack_require__(24)){
+    redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
+  }
+}
+
+var symbolStatics = {
+  // 19.4.2.1 Symbol.for(key)
+  'for': function(key){
+    return has(SymbolRegistry, key += '')
+      ? SymbolRegistry[key]
+      : SymbolRegistry[key] = $Symbol(key);
+  },
+  // 19.4.2.5 Symbol.keyFor(sym)
+  keyFor: function keyFor(key){
+    return keyOf(SymbolRegistry, key);
+  },
+  useSetter: function(){ setter = true; },
+  useSimple: function(){ setter = false; }
+};
+// 19.4.2.2 Symbol.hasInstance
+// 19.4.2.3 Symbol.isConcatSpreadable
+// 19.4.2.4 Symbol.iterator
+// 19.4.2.6 Symbol.match
+// 19.4.2.8 Symbol.replace
+// 19.4.2.9 Symbol.search
+// 19.4.2.10 Symbol.species
+// 19.4.2.11 Symbol.split
+// 19.4.2.12 Symbol.toPrimitive
+// 19.4.2.13 Symbol.toStringTag
+// 19.4.2.14 Symbol.unscopables
+$.each.call((
+  'hasInstance,isConcatSpreadable,iterator,match,replace,search,' +
+  'species,split,toPrimitive,toStringTag,unscopables'
+).split(','), function(it){
+  var sym = wks(it);
+  symbolStatics[it] = useNative ? sym : wrap(sym);
+});
+
+setter = true;
+
+$export($export.G + $export.W, {Symbol: $Symbol});
+
+$export($export.S, 'Symbol', symbolStatics);
+
+$export($export.S + $export.F * !useNative, 'Object', {
+  // 19.1.2.2 Object.create(O [, Properties])
+  create: $create,
+  // 19.1.2.4 Object.defineProperty(O, P, Attributes)
+  defineProperty: $defineProperty,
+  // 19.1.2.3 Object.defineProperties(O, Properties)
+  defineProperties: $defineProperties,
+  // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
+  getOwnPropertyDescriptor: $getOwnPropertyDescriptor,
+  // 19.1.2.7 Object.getOwnPropertyNames(O)
+  getOwnPropertyNames: $getOwnPropertyNames,
+  // 19.1.2.8 Object.getOwnPropertySymbols(O)
+  getOwnPropertySymbols: $getOwnPropertySymbols
+});
+
+// 24.3.2 JSON.stringify(value [, replacer [, space]])
+$JSON && $export($export.S + $export.F * (!useNative || buggyJSON), 'JSON', {stringify: $stringify});
+
+// 19.4.3.5 Symbol.prototype[@@toStringTag]
+setToStringTag($Symbol, 'Symbol');
+// 20.2.1.9 Math[@@toStringTag]
+setToStringTag(Math, 'Math', true);
+// 24.3.3 JSON[@@toStringTag]
+setToStringTag(global.JSON, 'JSON', true);
+
+/***/ },
 /* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -58944,20 +59356,109 @@ module.exports = VueRouter;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28)))
 
 /***/ },
-/* 235 */,
-/* 236 */,
+/* 235 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(192), __esModule: true };
+
+/***/ },
+/* 236 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(193), __esModule: true };
+
+/***/ },
 /* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 module.exports = { "default": __webpack_require__(194), __esModule: true };
 
 /***/ },
-/* 238 */,
-/* 239 */,
-/* 240 */,
-/* 241 */,
-/* 242 */,
-/* 243 */,
+/* 238 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(195), __esModule: true };
+
+/***/ },
+/* 239 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(196), __esModule: true };
+
+/***/ },
+/* 240 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(198), __esModule: true };
+
+/***/ },
+/* 241 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+
+var _Object$create = __webpack_require__(235)["default"];
+
+var _Object$setPrototypeOf = __webpack_require__(239)["default"];
+
+exports["default"] = function (subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+  }
+
+  subClass.prototype = _Object$create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      enumerable: false,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) _Object$setPrototypeOf ? _Object$setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+};
+
+exports.__esModule = true;
+
+/***/ },
+/* 242 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+
+exports.__esModule = true;
+
+var _typeof2 = __webpack_require__(243);
+
+var _typeof3 = _interopRequireDefault(_typeof2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return call && ((typeof call === "undefined" ? "undefined" : (0, _typeof3.default)(call)) === "object" || typeof call === "function") ? call : self;
+};
+
+/***/ },
+/* 243 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+
+var _Symbol = __webpack_require__(240)["default"];
+
+exports["default"] = function (obj) {
+  return obj && obj.constructor === _Symbol ? "symbol" : typeof obj;
+};
+
+exports.__esModule = true;
+
+/***/ },
 /* 244 */
 /***/ function(module, exports) {
 
@@ -59273,7 +59774,860 @@ exports.default = {
 };
 
 /***/ },
-/* 248 */,
+/* 248 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _defineProperties = __webpack_require__(236);
+
+var _defineProperties2 = _interopRequireDefault(_defineProperties);
+
+var _vue = __webpack_require__(7);
+
+var _vue2 = _interopRequireDefault(_vue);
+
+var _animation = __webpack_require__(255);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+exports.default = {
+
+	name: 'picker',
+
+	data: function data() {
+
+		return {
+			text: 'picker',
+			items: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+			propertyConfig: {},
+			isFlex: true
+		};
+	},
+
+
+	props: {
+		value: {
+			type: Boolean
+		},
+		dataItems: {
+			type: Array
+		}
+	},
+	// <mt-cell v-for="n in 10" :title="'内容 ' + n" />
+
+	methods: {
+		close: function close() {
+
+			var e = arguments.length <= 0 ? undefined : arguments[0];
+
+			if (e.target && e.target.classList.contains('picker-backdrop')) {
+
+				this.$emit('input', false);
+			}
+		},
+		onPanStart: function onPanStart() {
+			var _this = this;
+
+			var e = arguments.length <= 0 ? undefined : arguments[0];
+
+			var changedPointers = e.changedPointers[0],
+			    pageX = changedPointers.pageX;
+
+			this.itemEl.forEach(function (el) {
+
+				if (pageX > el.offsetLeft) {
+
+					_this.activeScrollerEl = el;
+				}
+			});
+
+			this.activeScrollerEl.bounceHelperLock = false;
+
+			this.startPageY = changedPointers.pageY;
+
+			this.startValue = this.activeScrollerEl.scrollValue;
+
+			this.activeScrollerEl.bounceHelper.stop();
+			this.activeScrollerEl.bounce.stop();
+			this.activeScrollerEl.boundMomentum.stop();
+		},
+		onPanMove: function onPanMove() {
+
+			var e = arguments.length <= 0 ? undefined : arguments[0];
+
+			if (this.activeScrollerEl.bounceHelperLock) return;
+
+			this.activeScrollerEl.scrollValue = this.startValue - (e.changedPointers[0].pageY - this.startPageY);
+		},
+		onPanEnd: function onPanEnd() {
+
+			var e = arguments.length <= 0 ? undefined : arguments[0];
+
+			if (this.activeScrollerEl.bounceHelperLock) return;
+
+			var activeScrollerEl = this.activeScrollerEl;
+
+			var scrollValue = activeScrollerEl.scrollValue,
+			    minScrollValue = activeScrollerEl.minScrollValue,
+			    maxScrollValue = activeScrollerEl.maxScrollValue,
+			    velocity = e.velocityY,
+			    boundValue = null,
+			    maxVelocity = 6;
+
+			if (scrollValue < minScrollValue) {
+
+				boundValue = minScrollValue;
+			} else if (scrollValue >= maxScrollValue) {
+
+				boundValue = maxScrollValue;
+			}
+
+			if (boundValue !== null) {
+
+				activeScrollerEl.bounce.setConfig({
+					startTime: Date.now(),
+					startValue: scrollValue,
+					endValue: boundValue
+				});
+
+				activeScrollerEl.bounce.run();
+
+				return;
+			}
+
+			if (velocity < -maxVelocity) {
+
+				velocity = -maxVelocity;
+			} else if (velocity > maxVelocity) {
+
+				velocity = maxVelocity;
+			}
+
+			activeScrollerEl.boundMomentum.momentum.setConfig({
+				startTime: Date.now(),
+				startValue: scrollValue,
+				startVelocity: velocity
+			});
+
+			activeScrollerEl.boundMomentum.setConfig({
+				maxMomentumValue: maxScrollValue,
+				startValue: scrollValue,
+				startVelocity: velocity,
+				callback: activeScrollerEl.animationScrollValue
+			});
+
+			activeScrollerEl.boundMomentum.run();
+		},
+		init: function init(el, index) {
+			var _this2 = this;
+
+			var i = index + 1,
+			    config = {},
+			    baseScrollValue = 0,
+			    count = 0,
+			    requestStart = 0,
+			    firstTimeRequest = true,
+			    onRequestData = null,
+			    onRequestDataName = 'onRequestData' + i,
+			    poolData = [],
+			    emptyFunc = function emptyFunc() {};
+
+			var requestPoolData = function requestPoolData() {
+
+				if (count + 3 >= requestStart * 5) {
+
+					var data = _this2.$el[onRequestDataName](requestStart++ * 50, requestStart * 50, i),
+					    length = void 0;
+
+					if (data instanceof Array) {
+
+						data = data.slice(0, 50);
+						length = data.length;
+						poolData = poolData.concat(data);
+
+						if (firstTimeRequest) {
+
+							length = length - 1;
+
+							el.maxScrollValue = (length < 0 ? 0 : length) * 18;
+						} else {
+
+							el.maxScrollValue += length * 18;
+						}
+					}
+				}
+			};
+
+			this.propertyConfig[onRequestDataName] = {
+				set: function set(func) {
+					if (func instanceof Function) {
+						onRequestData = func;
+					}
+				},
+				get: function get() {
+					return onRequestData || emptyFunc;
+				}
+			};
+
+			this.propertyConfig['data' + i] = {
+				set: function set(data) {
+					el.data = data;
+				},
+				get: function get() {
+					return el.data;
+				}
+			};
+
+			this.propertyConfig['value' + i] = {
+				set: function set(value) {
+					el.value = value;
+				},
+				get: function get() {
+					return el.value;
+				}
+			};
+
+			this.propertyConfig['scrollValue' + i] = {
+				set: function set(value) {
+					el.scrollValue = value;
+				},
+				get: function get() {
+					return el.scrollValue;
+				}
+			};
+
+			this.propertyConfig['maxScrollValue' + i] = {
+				set: function set(value) {
+					el.maxScrollValue = value;
+				},
+				get: function get() {
+					return el.maxScrollValue;
+				}
+			};
+
+			this.$el['reset' + i] = function () {
+
+				el.reset();
+
+				firstTimeRequest = true;
+
+				el.maxScrollValue = requestStart = count = baseScrollValue = poolData.length = poolData.length = 0;
+			};
+
+			el.scroll = function (el, value, oldValue) {
+				var data, helperData, countHelper;
+
+				if (value >= oldValue) {
+
+					if (value - baseScrollValue > 90) {
+
+						if (firstTimeRequest) {
+
+							requestPoolData();
+							firstTimeRequest = false;
+						}
+
+						baseScrollValue += 90;
+
+						data = poolData.slice(15 + count++ * 5, 15 + count * 5);
+						data.length = 5;
+						helperData = el.data;
+						countHelper = (count + 2) % 4;
+						countHelper += countHelper < 0 ? 4 : 0;
+
+						Array.prototype.splice.apply(helperData, [5 * countHelper, 5].concat(data));
+						el.data = helperData;
+
+						requestPoolData();
+					}
+				} else {
+
+					if (value < baseScrollValue) {
+
+						if (firstTimeRequest) {
+
+							requestPoolData();
+							firstTimeRequest = false;
+						}
+
+						baseScrollValue -= 90;
+						--count;
+						data = count > 0 ? poolData.slice((count - 1) * 5, count * 5) : [];
+						data.length = 5;
+						helperData = el.data;
+						countHelper = (count - 1) % 4;
+						countHelper += countHelper < 0 ? 4 : 0;
+
+						Array.prototype.splice.apply(helperData, [5 * countHelper, 5].concat(data));
+
+						el.data = helperData;
+					}
+				}
+			};
+
+			this.sphereScroller(el);
+		},
+		getItemValue: function getItemValue() {
+
+			var result = [];
+
+			this.itemEl.forEach(function (n) {
+
+				result.push(n.value);
+			});
+
+			return result;
+		},
+		sphereScroller: function sphereScroller(el) {
+
+			var self = this,
+			    currentIndex = 0,
+			    firstEl = el.firstElementChild.firstElementChild,
+			    currentEl = firstEl,
+			    childEls = Array.prototype.slice.apply(el.firstElementChild.children);
+
+			el.bounceHelperLock = false;
+
+			var boundMomentum = new _animation.BoundMomentumEasing(),
+			    boundMomentumIsEndedFn = boundMomentum.isEnded,
+			    bounce = new _animation.EaseOutEasing(),
+			    bounceHelper = new _animation.EaseOutEasing();
+
+			var animationScrollValue = function animationScrollValue(value) {
+
+				el.scrollValue = value;
+			};
+
+			el.animationScrollValue = animationScrollValue;
+
+			boundMomentum.momentum.setConfig({
+				acceleration: 30,
+				friction: 0.5
+			});
+			boundMomentum.bounce.setConfig({
+				acceleration: 30
+			});
+			boundMomentum.setConfig({
+				minVelocity: 1,
+				minMomentumValue: 0,
+				callback: animationScrollValue
+			});
+
+			bounce.setConfig({
+				duration: 400,
+				callback: animationScrollValue
+			});
+
+			bounceHelper.setConfig({
+				duration: 400,
+				callback: animationScrollValue
+			});
+
+			var animationScrollValueHelper = function animationScrollValueHelper() {
+
+				var scrollValue = el.scrollValue,
+				    deltaValue = scrollValue % 18,
+				    boundValue = void 0;
+
+				boundValue = scrollValue - deltaValue + (deltaValue < 9 ? 0 : 18);
+
+				el.bounceHelper.setConfig({
+					startTime: Date.now(),
+					startValue: scrollValue,
+					endValue: boundValue
+				});
+
+				el.bounceHelper.run();
+			};
+
+			boundMomentum.isEnded = function () {
+
+				var result = boundMomentumIsEndedFn.call(boundMomentum);
+
+				if (!boundMomentum.isOutOfBound && result) {
+
+					animationScrollValueHelper();
+				}
+
+				return result;
+			};
+
+			el.bounceHelper = bounceHelper;
+			el.bounce = bounce;
+			el.boundMomentum = boundMomentum;
+
+			(0, _defineProperties2.default)(el, {
+
+				data: {
+					set: function set(data) {
+						var _this3 = this;
+
+						if (!(data instanceof Array)) return;
+
+						var length = data.length,
+						    value = void 0,
+						    htmlValue = void 0;
+
+						delete this.$data && (this.$data = []);
+
+						childEls.forEach(function (el, i) {
+
+							if (i < length) {
+
+								value = data[i];
+
+								_this3.$data.push(value);
+
+								htmlValue = value instanceof Object ? value[_this3.dataKey] : value;
+
+								el.innerHTML = htmlValue === undefined ? '' : htmlValue;
+							} else {
+
+								el.innerHTML = '';
+							}
+						});
+					},
+					get: function get() {
+						return this.$data || [];
+					}
+				},
+
+				minScrollValue: {
+					get: function get() {
+						return 0;
+					}
+				},
+
+				maxScrollValue: {
+					set: function set(value) {
+						el.$maxScrollValue = value;
+					},
+					get: function get() {
+						return parseInt(el.$maxScrollValue || 0);
+					}
+				},
+
+				value: {
+					set: function set(value) {
+
+						var baseScrollValue = Math.floor(Math.round(this.scrollValue) / 360) * 360,
+						    data = this.data,
+						    itemValue = void 0,
+						    i = 0,
+						    length = data.length;
+
+						this.bounceHelperLock = true;
+
+						this.bounceHelper.stop();
+						this.bounce.stop();
+						this.boundMomentum.stop();
+
+						for (; i < length; ++i) {
+
+							itemValue = data[i];
+
+							if (itemValue instanceof Object) {
+
+								if (value instanceof Object) {
+
+									if (itemValue.$key === value.$key && itemValue[el.dataKey] === value[el.dataKey]) {
+
+										break;
+									}
+								} else {
+
+									if (itemValue.$key === value || itemValue[el.dataKey] === value) {
+
+										break;
+									}
+								}
+							} else {
+
+								if (itemValue === value || value.$key || value[el.dataKey]) {
+
+									break;
+								}
+							}
+						}
+
+						i = i < 20 ? i : 0;
+
+						this.bounceHelper.setConfig({
+							startTime: Date.now(),
+							startValue: this.scrollValue,
+							endValue: baseScrollValue + i * 18
+						});
+
+						this.bounceHelper.run();
+					},
+					get: function get() {
+						return this.data[currentIndex];
+					}
+				},
+
+				scrollValue: {
+					set: function set(value) {
+
+						var oldValue = el.scrollValue,
+						    index = Math.round(value / 18) % 20;
+
+						childEls.forEach(function (el, i) {
+
+							el.style['transform'] = 'translate3d(0, 0, -110px) rotateX(' + (value - 18 * i) + 'deg)';
+						});
+
+						if (index < 0) index += 20;
+
+						if (index !== currentIndex) {
+
+							currentEl.classList.remove('scroller-is-current');
+
+							currentEl = childEls[index];
+
+							currentEl.classList.add('scroller-is-current');
+
+							currentIndex = index;
+
+							self.$emit('change', self.getItemValue(), self.$el, self.reset);
+						};
+
+						el.scroll(el, value, oldValue);
+					},
+					get: function get() {
+
+						return Number(((firstEl.style['transform'] || '').match(/rotateX\((\-?\d+(?:\.\d+)?)deg\)/) || [0, 0])[1]);
+					}
+				}
+			});
+
+			el.reset = function () {
+
+				el.data = [];
+				el.bounceHelper.stop();
+				el.bounce.stop();
+				el.boundMomentum.stop();
+				el.scrollValue = 0;
+			};
+		},
+		reset: function reset(index, result) {
+			var data = result.slice(0, 15);
+
+			this.$el['reset' + index]();
+
+			this.$el['data' + index] = data;
+
+			this.$el['maxScrollValue' + index] = (data.length - 1) * 18;
+
+			this.$el['onRequestData' + index] = function (begin, end, index) {
+
+				return result.slice(begin, end);
+			};
+
+			this.$emit('change', this.getItemValue(), this.$el, this.reset);
+		},
+		locateToDefaultValue: function locateToDefaultValue(el, index, data, targetValue, maxValue) {
+
+			var dataName = 'data' + index,
+			    maxScrollValueName = 'maxScrollValue' + index,
+			    scrollValueName = 'scrollValue' + index;
+
+			el[dataName] = data;
+			el[maxScrollValueName] = (maxValue - 1) * 18;
+			el[scrollValueName] += 1;
+
+			for (var i = 1; i < maxValue + 1; i += 5) {
+
+				if (targetValue < i + 5) {
+
+					el[scrollValueName] += (targetValue - i) * 18;
+
+					break;
+				}
+
+				el[scrollValueName] += 90;
+			}
+
+			el[scrollValueName] -= 1;
+		},
+		create: function create(result) {
+			var _this4 = this;
+
+			var isFlex = false;
+
+			this.itemEl = Array.prototype.slice.apply(this.$el.querySelectorAll('.picker-item'));
+
+			this.itemEl.forEach(this.init);
+
+			(0, _defineProperties2.default)(this.$el, this.propertyConfig);
+
+			result.forEach(function (n, i) {
+
+				n.values.map(function (n, i) {
+
+					n instanceof Object && (n.$key = i + 1);
+				});
+
+				if (!n.width) {
+
+					isFlex = true;
+				}
+
+				var index = n.index || 1,
+				    values = n.values;
+
+				_this4.itemEl[i]['dataKey'] = n.name || 'value';
+
+				i = ++i;
+
+				_this4.$el['onRequestData' + i] = function (begin, end, index) {
+
+					return _this4.dataItems[index - 1].values.slice(begin, end);
+				};
+
+				_this4.locateToDefaultValue(_this4.$el, i, values.slice(0, 15), index, values.length);
+
+				_this4.isFlex = isFlex;
+			});
+		}
+	},
+
+	watch: {
+		dataItems: function dataItems(result) {
+			var _this5 = this;
+
+			console.log(result);
+			setTimeout(function () {
+				result.length && _this5.create(result);
+			}, 0);
+		}
+	},
+
+	mounted: function mounted() {
+
+		this.dataItems.length && this.create(this.dataItems);
+	}
+};
+
+/***/ },
 /* 249 */
 /***/ function(module, exports) {
 
@@ -59387,9 +60741,156 @@ exports.default = {
 
 /***/ },
 /* 251 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: SyntaxError: Unexpected token, expected , (111:4)\n\n\u001b[0m \u001b[90m 109 | \u001b[39m      \n \u001b[90m 110 | \u001b[39m    }\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 111 | \u001b[39m    onCityValuesChange (result\u001b[33m,\u001b[39m pickerEl\u001b[33m,\u001b[39m reset) {\n \u001b[90m     | \u001b[39m    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 112 | \u001b[39m      \u001b[36mvar\u001b[39m self \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 113 | \u001b[39m      let province \u001b[33m=\u001b[39m result[\u001b[35m0\u001b[39m]\u001b[33m,\u001b[39m city \u001b[33m=\u001b[39m result[\u001b[35m1\u001b[39m]\u001b[33m,\u001b[39mregion \u001b[33m=\u001b[39m result[\u001b[35m2\u001b[39m]\u001b[33m;\u001b[39m\n \u001b[90m 114 | \u001b[39m      let thisProvince \u001b[33m=\u001b[39m province \u001b[33m?\u001b[39m province \u001b[33m:\u001b[39m self\u001b[33m.\u001b[39mlastProvince\u001b[33m,\u001b[39m\u001b[0m\n");
+"use strict";
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _picker = __webpack_require__(260);
+
+var _picker2 = _interopRequireDefault(_picker);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+  data: function data() {
+    return {
+      visible: false,
+      cityItems: [],
+      text: '选择地区',
+      provinces: [],
+      lastProvince: {},
+      citys: [],
+      lastCity: {},
+      regions: [],
+      lastRegion: {}
+    };
+  },
+
+  components: {
+    picker: _picker2.default
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    var self = this;
+
+    var provinces = [],
+        lastProvince = void 0,
+        citys = [],
+        lastCity = void 0,
+        regions = [],
+        lastRegion = void 0;
+
+    this.$http.get('/src/asset/region.json').then(function (result) {
+      var self = _this;
+      // let city = result.data.result.city;
+      var country = result.data.data;
+      self.provinces = country;
+      lastProvince = self.provinces[0];
+      self.lastProvince = self.provinces[0];
+      self.citys = self.lastProvince.children;
+      self.lastCity = self.citys[0];
+      self.regions = self.lastCity.children;
+      self.lastRegion = self.regions[0];
+      _this.cityItems = [{
+        name: 'label',
+        width: '33%',
+        values: self.provinces
+      }, {
+        name: 'label',
+        width: '33%',
+        values: self.citys
+      }, {
+        name: 'label',
+        width: '33%',
+        values: self.regions
+      }];
+    });
+  },
+
+  watch: {},
+  methods: {
+    formCheck: function formCheck() {},
+    onCityValuesChange: function onCityValuesChange(result, pickerEl, reset) {
+      var self = this;
+      var province = result[0],
+          city = result[1],
+          region = result[2];
+      var thisProvince = province ? province : self.lastProvince,
+          thisCity = city ? city : self.lastCity,
+          thisRegion = region ? region : self.lastRegion;
+      this.text = thisProvince.label + '/ ' + thisCity.label + '/ ' + thisRegion.label;
+      if (self.lastProvince !== thisProvince) {
+        self.lastProvince = thisProvince;
+        self.citys = self.lastProvince.children;
+        reset(2, self.citys);
+        return;
+      }
+      if (self.lastCity !== thisCity) {
+        self.lastCity = thisCity;
+        self.regions = thisCity.children;
+        reset(3, self.regions);
+      }
+      if (self.lastRegion !== thisRegion) {
+        self.lastRegion = thisRegion;
+      }
+    }
+  }
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /***/ },
 /* 252 */
@@ -59662,7 +61163,498 @@ exports.default = {
 };
 
 /***/ },
-/* 255 */,
+/* 255 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.BoundMomentumEasing = exports.MomentumEasing = exports.BounceEasing = exports.EaseOutEasing = undefined;
+
+var _getPrototypeOf = __webpack_require__(238);
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _possibleConstructorReturn2 = __webpack_require__(242);
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = __webpack_require__(241);
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _classCallCheck2 = __webpack_require__(39);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(40);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+if (!('requestAnimationFrame' in window)) {
+
+    window.requestAnimationFrame = window.webkitRequestAnimationFrame;
+    window.cancelAnimationFrame = window.webkitCancelAnimationFrame || window.webkitCancelRequestAnimationFrame;
+};
+
+var AnimationFrame = function () {
+    function AnimationFrame() {
+        (0, _classCallCheck3.default)(this, AnimationFrame);
+
+
+        this.ids = [];
+        this.timer = 0;
+    }
+
+    (0, _createClass3.default)(AnimationFrame, [{
+        key: 'animationStop',
+        value: function animationStop(id) {
+
+            cancelAnimationFrame(this.ids[id]);
+
+            delete this.ids[id];
+        }
+    }, {
+        key: 'cumulativeTimer',
+        value: function cumulativeTimer() {
+
+            return ++this.timer;
+        }
+    }, {
+        key: 'animationRun',
+        value: function animationRun(func, scope) {
+            var _this = this;
+
+            var id = void 0;
+
+            func = scope ? func.bind(scope) : func;
+
+            var onAnimationFrameEvent = function onAnimationFrameEvent() {
+
+                var self = onAnimationFrameEvent,
+                    id = self.$id;
+
+                if (func() !== false) {
+
+                    _this.ids[id] = requestAnimationFrame(self);
+                } else {
+
+                    _this.animationStop(id);
+                }
+            };
+
+            this.ids[id = onAnimationFrameEvent.$id = this.cumulativeTimer()] = requestAnimationFrame(onAnimationFrameEvent);
+
+            return id;
+        }
+    }]);
+    return AnimationFrame;
+}();
+
+var Easing = function (_AnimationFrame) {
+    (0, _inherits3.default)(Easing, _AnimationFrame);
+
+    function Easing() {
+        (0, _classCallCheck3.default)(this, Easing);
+        return (0, _possibleConstructorReturn3.default)(this, (Easing.__proto__ || (0, _getPrototypeOf2.default)(Easing)).call(this));
+    }
+
+    (0, _createClass3.default)(Easing, [{
+        key: 'setConfig',
+        value: function setConfig(config) {
+
+            var name = void 0;
+
+            for (name in config) {
+
+                config.hasOwnProperty(name) && (this[name] = config[name]);
+            }
+        }
+    }, {
+        key: 'defaultRun',
+        value: function defaultRun() {
+
+            var ended = this.isEnded();
+
+            this.callback(this.getValue(), ended);
+
+            if (ended) {
+
+                this.reset();
+
+                return false;
+            }
+        }
+    }, {
+        key: 'run',
+        value: function run() {
+
+            this.$animationFrameId = this.animationRun(this.defaultRun, this);
+        }
+    }, {
+        key: 'stop',
+        value: function stop() {
+
+            this.reset();
+
+            this.animationStop(this.$animationFrameId);
+        }
+    }, {
+        key: 'isEnded',
+        value: function isEnded() {
+
+            return true;
+        }
+    }, {
+        key: 'getValue',
+        value: function getValue() {}
+    }, {
+        key: 'reset',
+        value: function reset() {}
+    }, {
+        key: 'startTime',
+        set: function set(value) {
+
+            this.$startTime = value;
+        },
+        get: function get() {
+
+            return this.$startTime || (this.$startTime = Date.now());
+        }
+    }, {
+        key: 'callback',
+        set: function set(value) {
+
+            this.$func = value;
+        },
+        get: function get() {
+
+            return this.$func || (this.$func = function () {});
+        }
+    }]);
+    return Easing;
+}(AnimationFrame);
+
+var EaseOutEasing = function (_Easing) {
+    (0, _inherits3.default)(EaseOutEasing, _Easing);
+
+    function EaseOutEasing() {
+        (0, _classCallCheck3.default)(this, EaseOutEasing);
+        return (0, _possibleConstructorReturn3.default)(this, (EaseOutEasing.__proto__ || (0, _getPrototypeOf2.default)(EaseOutEasing)).call(this));
+    }
+
+    (0, _createClass3.default)(EaseOutEasing, [{
+        key: 'isEnded',
+        value: function isEnded() {
+
+            return Date.now() - this.startTime > this.duration;
+        }
+    }, {
+        key: 'getValue',
+        value: function getValue() {
+
+            var currentValue = this.startValue + (1 - Math.pow(1 - (Date.now() - this.startTime) / this.duration, this.exponent)) * this.distance;
+
+            if (this.isEnded()) {
+
+                return this.endValue;
+            }
+
+            return currentValue;
+        }
+    }, {
+        key: 'distance',
+        get: function get() {
+
+            return this.endValue - this.startValue;
+        }
+    }, {
+        key: 'exponent',
+        get: function get() {
+
+            return 4;
+        }
+    }, {
+        key: 'duration',
+        get: function get() {
+
+            return this.$duration;
+        },
+        set: function set(value) {
+
+            this.$duration = value || 1500;
+        }
+    }]);
+    return EaseOutEasing;
+}(Easing);
+
+var BounceEasing = function (_Easing2) {
+    (0, _inherits3.default)(BounceEasing, _Easing2);
+
+    function BounceEasing() {
+        (0, _classCallCheck3.default)(this, BounceEasing);
+        return (0, _possibleConstructorReturn3.default)(this, (BounceEasing.__proto__ || (0, _getPrototypeOf2.default)(BounceEasing)).call(this));
+    }
+
+    (0, _createClass3.default)(BounceEasing, [{
+        key: 'getValue',
+        value: function getValue() {
+
+            var theta = (Date.now() - this.startTime) / this.acceleration;
+
+            return this.startValue - this.startVelocity * theta * Math.pow(Math.E, -this.springTension * theta);
+        }
+    }, {
+        key: 'springTension',
+        get: function get() {
+
+            return 0.3;
+        }
+    }, {
+        key: 'acceleration',
+        set: function set(value) {
+
+            this.$acceleration = value;
+        },
+        get: function get() {
+
+            return this.$acceleration || 30;
+        }
+    }, {
+        key: 'startVelocity',
+        set: function set(value) {
+
+            this.$startVelocity = value;
+        },
+        get: function get() {
+
+            return this.$startVelocity || 0;
+        }
+    }]);
+    return BounceEasing;
+}(Easing);
+
+var MomentumEasing = function (_Easing3) {
+    (0, _inherits3.default)(MomentumEasing, _Easing3);
+
+    function MomentumEasing() {
+        (0, _classCallCheck3.default)(this, MomentumEasing);
+        return (0, _possibleConstructorReturn3.default)(this, (MomentumEasing.__proto__ || (0, _getPrototypeOf2.default)(MomentumEasing)).call(this));
+    }
+
+    (0, _createClass3.default)(MomentumEasing, [{
+        key: 'getValue',
+        value: function getValue() {
+
+            return this.startValue + this.startVelocity * (1 - this.frictionFactor) / this.$theta;
+        }
+    }, {
+        key: 'acceleration',
+        set: function set(value) {
+
+            this.$startVelocity = this.startVelocity * value;
+            this.$alpha = this.$theta / value;
+            this.$acceleration = value;
+        },
+        get: function get() {
+
+            return this.$acceleration || 30;
+        }
+    }, {
+        key: 'friction',
+        set: function set(value) {
+
+            var theta = Math.log(1 - value / 10);
+
+            this.$theta = theta;
+            this.$alpha = theta / this.acceleration;
+            this.$friction = value;
+        },
+        get: function get() {
+
+            return this.$friction || 0;
+        }
+    }, {
+        key: 'startVelocity',
+        set: function set(value) {
+
+            this.$startVelocity = value * this.acceleration;
+        },
+        get: function get() {
+
+            return this.$startVelocity || 0;
+        }
+    }, {
+        key: 'frictionFactor',
+        get: function get() {
+
+            return Math.exp((Date.now() - this.startTime) * this.$alpha);
+        }
+    }, {
+        key: 'velocity',
+        get: function get() {
+
+            return this.frictionFactor * this.startVelocity;
+        }
+    }]);
+    return MomentumEasing;
+}(Easing);
+
+var BoundMomentumEasing = function (_Easing4) {
+    (0, _inherits3.default)(BoundMomentumEasing, _Easing4);
+
+    function BoundMomentumEasing() {
+        (0, _classCallCheck3.default)(this, BoundMomentumEasing);
+
+        var _this6 = (0, _possibleConstructorReturn3.default)(this, (BoundMomentumEasing.__proto__ || (0, _getPrototypeOf2.default)(BoundMomentumEasing)).call(this));
+
+        _this6.momentum = new MomentumEasing();
+        _this6.bounce = new BounceEasing();
+        return _this6;
+    }
+
+    (0, _createClass3.default)(BoundMomentumEasing, [{
+        key: 'setStartTime',
+        value: function setStartTime(startTime) {
+
+            this.momentum.startTime = startTime;
+            this.startTime = startTime;
+        }
+    }, {
+        key: 'isEnded',
+        value: function isEnded() {
+
+            var momentum = this.momentum;
+
+            if (!this.isOutOfBound) {
+
+                if (Math.abs(momentum.velocity) < this.minVelocity) {
+
+                    return true;
+                }
+            }
+
+            if (this.isBouncingBack) {
+
+                if (Math.round(this.bounce.getValue()) === (momentum.startVelocity > 0 ? this.minMomentumValue : this.maxMomentumValue)) {
+
+                    return true;
+                }
+            }
+
+            return false;
+        }
+    }, {
+        key: 'reset',
+        value: function reset() {
+
+            this.lastValue = null;
+
+            this.isBouncingBack = false;
+
+            this.isOutOfBound = false;
+        }
+    }, {
+        key: 'getValue',
+        value: function getValue() {
+
+            var momentum = this.momentum,
+                bounce = this.bounce,
+                startVelocity = momentum.startVelocity,
+                direction = startVelocity > 0 ? 1 : -1,
+                minValue = this.minMomentumValue,
+                maxValue = this.maxMomentumValue,
+                boundedValue = direction == 1 ? minValue : maxValue,
+                lastValue = this.lastValue,
+                value = void 0,
+                velocity = void 0;
+
+            if (startVelocity === 0) {
+
+                return this.startValue;
+            }
+
+            if (!this.isOutOfBound) {
+
+                value = momentum.getValue();
+                velocity = momentum.velocity;
+
+                if (maxValue === undefined) {
+
+                    if (value > minValue) {
+
+                        return value;
+                    }
+                }
+
+                if (value >= minValue && value <= maxValue) {
+
+                    return value;
+                }
+
+                this.isOutOfBound = true;
+
+                bounce.startTime = Date.now();
+                bounce.startVelocity = velocity;
+                bounce.startValue = boundedValue;
+            }
+
+            value = bounce.getValue();
+
+            if (!this.isEnded() && !this.isBouncingBack && lastValue !== null && direction == 1 && value < lastValue || direction == -1 && value > lastValue) {
+
+                this.isBouncingBack = true;
+            }
+
+            this.lastValue = value;
+
+            return value;
+        }
+    }, {
+        key: 'minVelocity',
+        set: function set(value) {
+
+            this.$minVelocity = value;
+        },
+        get: function get() {
+
+            return this.$minVelocity || 0.01;
+        }
+    }, {
+        key: 'minMomentumValue',
+        set: function set(value) {
+
+            return this.$minMomentumValue = value;
+        },
+        get: function get() {
+
+            return this.$minMomentumValue || 0;
+        }
+    }, {
+        key: 'maxMomentumValue',
+        set: function set(value) {
+
+            return this.$maxMomentumValue = value;
+        },
+        get: function get() {
+
+            return this.$maxMomentumValue || 0;
+        }
+    }]);
+    return BoundMomentumEasing;
+}(Easing);
+
+exports.EaseOutEasing = EaseOutEasing;
+exports.BounceEasing = BounceEasing;
+exports.MomentumEasing = MomentumEasing;
+exports.BoundMomentumEasing = BoundMomentumEasing;
+
+/***/ },
 /* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -59927,7 +61919,53 @@ module.exports = __vue_exports__
 
 
 /***/ },
-/* 260 */,
+/* 260 */
+/***/ function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = {}
+
+/* styles */
+__webpack_require__(183)
+
+/* script */
+__vue_exports__ = __webpack_require__(248)
+
+/* template */
+var __vue_template__ = __webpack_require__(269)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "/Users/lqh/grove/personal/demo/turntable/src/component/picker.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4169e5f4", __vue_options__)
+  } else {
+    hotAPI.reload("data-v-4169e5f4", __vue_options__)
+  }
+})()}
+if (__vue_options__.functional) {console.error("[vue-loader] picker.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+module.exports = __vue_exports__
+
+
+/***/ },
 /* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -60309,7 +62347,80 @@ if (false) {
 }
 
 /***/ },
-/* 269 */,
+/* 269 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
+  return _h('transition', {
+    attrs: {
+      "name": "picker"
+    }
+  }, [_h('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.value),
+      expression: "value"
+    }],
+    staticClass: "picker-backdrop",
+    on: {
+      "click": _vm.close
+    }
+  }, [_h('div', {
+    staticClass: "picker-wrapper"
+  }, [_vm._t("top-content"), " ", _h('div', {
+    staticClass: "picker-content"
+  }, [_h('div', {
+    staticClass: "picker-body",
+    class: {
+      'picker-flex-body': _vm.isFlex
+    }
+  }, [_vm._l((_vm.dataItems), function(item) {
+    return _h('div', {
+      staticClass: "picker-item",
+      style: ({
+        width: item.width
+      })
+    }, [_h('div', {
+      staticClass: "picker-item-container"
+    }, [_vm._l((_vm.items), function(list) {
+      return _h('div', {
+        class: {
+          'scroller-is-current': list == 1
+        }
+      })
+    })])])
+  })]), " ", _h('div', {
+    directives: [{
+      name: "touch",
+      rawName: "v-touch:panstart",
+      value: (_vm.onPanStart),
+      expression: "onPanStart",
+      arg: "panstart"
+    }, {
+      name: "touch",
+      rawName: "v-touch:panmove",
+      value: (_vm.onPanMove),
+      expression: "onPanMove",
+      arg: "panmove"
+    }, {
+      name: "touch",
+      rawName: "v-touch:panend",
+      value: (_vm.onPanEnd),
+      expression: "onPanEnd",
+      arg: "panend"
+    }],
+    staticClass: "picker-helper"
+  })]), " ", _vm._t("bottom-content")])])])
+},staticRenderFns: []}
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-4169e5f4", module.exports)
+  }
+}
+
+/***/ },
 /* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
